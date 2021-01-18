@@ -26,6 +26,7 @@
       "prettier/prettier": "error",
       "eslint-disable-next-line":"off",
       "no-console":"off",
+      "class-methods-use-this":"off",
       "import/extensions": [
         "error",
         "ignorePackages",
