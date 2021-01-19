@@ -25,6 +25,25 @@ class OngRepository implements IOngRepository {
 
     return ong;
   }
+
+  public async findById(id: string): Promise<Ong | undefined> {
+    const ong = await this.ormRepository.findOne({
+      where: { id },
+    });
+
+    return ong;
+  }
+
+  public async update({ id, name, email, password }: IOngDTO): Promise<Ong> {
+    const ong = await this.ormRepository.save({
+      id,
+      name,
+      email,
+      password,
+    });
+
+    return ong;
+  }
 }
 
 export default OngRepository;
