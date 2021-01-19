@@ -25,7 +25,9 @@
     "rules": {
       "prettier/prettier": "error",
       "eslint-disable-next-line":"off",
+      "no-useless-constructor": "off",
       "no-console":"off",
+      "camelcase": "off",
       "class-methods-use-this":"off",
       "import/extensions": [
         "error",
