@@ -1,5 +1,4 @@
 import 'reflect-metadata';
+import { createConnections } from 'typeorm';
 
-import { createConnection } from 'typeorm';
-
-createConnection();
+createConnections();
