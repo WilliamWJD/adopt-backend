@@ -18,7 +18,7 @@ class OngController {
 
       return res.json(createOng);
     } catch (err) {
-      return res.status(401).json(`erro: ${err}`);
+      return res.status(401).json(err.message);
     }
   }
 }

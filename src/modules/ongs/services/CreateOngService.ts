@@ -21,6 +21,12 @@ class CreateOngService {
   ) {}
 
   public async execute({ name, email, password }: Request): Promise<Ong> {
+    const checkOng = await this.ongRepository.findByEmail(email);
+
+    if (checkOng) {
+      throw new Error('already an ONG registered with this email');
+    }
+
     const passwordHash = await this.hashProvider.generatedHash(password);
 
     const ong = await this.ongRepository.create({
